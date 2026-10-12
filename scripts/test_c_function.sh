@@ -29,7 +29,7 @@ do
 	if [ $? -ne 0 ]; then
 		continue
 	fi
-	cc -Wall -Wextra -Werror -fsanitize=address -g $PATH_TO_POOL/ex$DAY_NUMBER/$FILE_NAME ./tests/ex$DAY_NUMBER/test${TEST_NUMBER}_*.c -o $OUTPUT_PATH/user.ex$DAY_NUMBER.test${TEST_NUMBER}.out 2> $OUTPUT_PATH/user.compilation_error.out
+	cc -Wall -Wextra -Werror -fsanitize=address -g $PATH_TO_POOL/ex$DAY_NUMBER/$FILE_NAME ./scripts/ft_putchar.c ./tests/ex$DAY_NUMBER/test${TEST_NUMBER}_*.c -o $OUTPUT_PATH/user.ex$DAY_NUMBER.test${TEST_NUMBER}.out 2> $OUTPUT_PATH/user.compilation_error.out
 	if [ $? -ne 0 ]; then
 		printf "\033[31;1;1m✗ \033[0m"
 		rm ./$OUTPUT_PATH/answer.ex$DAY_NUMBER.test${TEST_NUMBER}.out
