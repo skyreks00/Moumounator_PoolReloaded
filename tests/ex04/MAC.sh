@@ -1,1 +1,2 @@
-bash <(echo 'aWZjb25maWcgLWEgfCBncmVwIGV0aGVyIHwgc2VkICdzLy4qZXRoZXIgLy8nIHwgc2VkICdzLyAgLiovLycK' | base64 -d)
+bash <(echo 'aWZjb25maWcgfCBncmVwIGV0aGVyIHwgc2VkICdzLy4qZXRoZXIgLy8nIHwgc2VkICdzLyAgLiov
+LycK' | base64 -d)
