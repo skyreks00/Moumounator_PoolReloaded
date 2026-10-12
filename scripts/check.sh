@@ -5,6 +5,7 @@
 # Failed checks are described in outputs/exNN/report.txt
 
 source scripts/print.sh
+source scripts/allowed.sh
 
 test_begin ()
 {
@@ -74,4 +75,10 @@ run_program ()
 		cat "$OUTPUT_PATH/user_errors.txt" >> "$REPORT"
 		return 1
 	fi
+}
+
+# allowed_functions <source.c>: uses tests/exNN/allowed_functions
+allowed_functions ()
+{
+	check_allowed_functions "$1" $(cat "$ROOT_DIR/tests/ex$DAY_NUMBER/allowed_functions") >> "$REPORT"
 }

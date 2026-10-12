@@ -28,7 +28,7 @@ cd ${OUTPUT_PATH}/answer
 source ../../../tests/ex$1/clean
 find . > ../answer.txt
 cd ../user
-source ../../../$PATH_TO_POOL/ex$1/clean 2> ../user_errors.txt
+source ../../../$PATH_TO_POOL/ex$1/clean > ../user_stdout.txt 2> ../user_errors.txt
 find . > ../user.txt
 cd ../../..
 diff $OUTPUT_PATH/answer.txt $OUTPUT_PATH/user.txt > /dev/null

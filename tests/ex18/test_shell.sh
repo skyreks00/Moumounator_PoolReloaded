@@ -1,6 +1,6 @@
 source scripts/check.sh
 
-test_begin $1 ft_print_params 5
+test_begin $1 ft_print_params 6
 
 compile ()
 {
@@ -17,6 +17,7 @@ params ()
 	fi
 	run_program "$OUTPUT_PATH/answer.txt" "$WORK/a.out" "$@"
 }
+check "only allowed functions, ft_putchar only declared" allowed_functions "$USER_DIR/ft_print_params.c"
 check "subject example" params test1 test2 test3
 check "no argument" params
 check "single argument" params 42

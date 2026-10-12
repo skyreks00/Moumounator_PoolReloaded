@@ -1,6 +1,6 @@
 source scripts/check.sh
 
-test_begin $1 ft_sort_params 6
+test_begin $1 ft_sort_params 7
 
 compile ()
 {
@@ -17,6 +17,7 @@ sorted ()
 	fi
 	run_program "$OUTPUT_PATH/answer.txt" "$WORK/a.out" "$@"
 }
+check "only allowed functions, ft_putchar only declared" allowed_functions "$USER_DIR/ft_sort_params.c"
 check "already sorted" sorted a b c
 check "reverse order" sorted test3 test2 test1
 check "no argument" sorted
